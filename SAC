@@ -1,0 +1,73 @@
+local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+
+local Library = DarkraiX:Window("Sac 7x","KR | Seller","",Enum.KeyCode.RightControl);
+
+Main = Library:Tab("Main")
+Misc = Library:Tab("Misc")
+About = Library:Tab("About")
+ 
+Main:Seperator("Main Page")
+
+Main:Button("Adopt Me Game pass",function()
+    while true do
+   wait()
+local clientData = require(game.ReplicatedStorage.ClientModules.Core.ClientData)
+local playerData = clientData.get_data()[tostring(game.Players.LocalPlayer)]
+for i,v in pairs(playerData.inventory.pets) do
+v.properties.rideable = true
+end
+end
+end)
+
+Main:Button("Pet Simulator X",function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/CATS-or-Pet-Simulator-X!-Pasta-v2-6841"))()
+end)
+
+Main:Button("Fly Race",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KISOOUF/Cat-Core/main/script"))()
+end)
+
+Main:Button("Meep City PLUS",function()
+    game.ReplicatedStorage.PlayerData[game.Players.LocalPlayer.UserId].PLUS.Value = true
+end)
+
+Main:Button("Tapping Simulator!",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HamieXD/Script-Src/main/Tapping Simulator"))()
+end)
+
+
+
+
+
+
+
+
+
+
+Main:Line()
+
+Misc:Seperator("Misc Page")
+
+Misc:Button("Fly",function()
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+Misc:Slider("Speed",1,500,18,function(value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end)
+
+Misc:Slider("Jump",1,500,25,function(value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+    end)
+
+Misc:Slider("Fov",1,100,25,function(value)
+        game.Workspace.CurrentCamera.FieldOfView = value
+    end)
+
+Misc:Line()
+
+About:Seperator("About Developer")
+
+About:Seperator("Script Made By Sac 7x")
+About:Seperator("KR | Seller on discord")
+About:Line()
